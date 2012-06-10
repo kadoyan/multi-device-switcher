@@ -48,6 +48,9 @@ class Multi_Device_Switcher {
 		else {
 			$this->device = '';
 		}
+		if (isset($_GET['mode'])&&$_GET['mode']==='pc') {
+			$this->device = '';
+		}
 
 		if ($this->device) {
 			add_filter('stylesheet', array(&$this, 'get_stylesheet'));
