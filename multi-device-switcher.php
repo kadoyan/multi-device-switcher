@@ -48,7 +48,13 @@ class Multi_Device_Switcher {
 		else {
 			$this->device = '';
 		}
-		if (isset($_GET['mode'])&&$_GET['mode']==='pc') {
+		
+		if (isset($_GET['mode'])&&$_GET['mode']==="pc") {
+			$this->device = '';
+		}
+		if (isset($_GET['mode'])&&$_GET['mode']==='sp') {
+			$this->device = 'smart';
+		} elseif (isset($_COOKIE["mode"])&&$_COOKIE["mode"]==="pc") {
 			$this->device = '';
 		}
 
